@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏布局</title>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            width: 1200px;
+            height: 120px;
+            background-color: red;
+            margin:0 auto;
+        }
+        .content{
+            width: 1200px;
+            margin:15px auto 0px;
+            overflow:hidden;
+        }
+        .nav{
+            width: 190px;
+            background-color: peru;
+            float: left;
+        }
+        #menu{
+            width:190px;
+            margin:50px auto;
+        }
+        li{
+            list-style:none;
+
+            cursor:pointer;
+        }
+        h2{
+            text-indent:30px;
+            font-size:20px;
+            color:#FFF;
+            line-height:24px;
+        }
+        .list{
+            display:none;
+            background: #eee;
+        }
+        .list li{
+            background:yellow;
+            padding: 2px 15px;
+        }
+
+        .main{
+            margin: 0px 10px 0px;
+            width: 800px;
+            background-color: #484848;
+            float: left;
+        }
+        .word{
+            width: 760px;
+            background-color: gold;
+            margin: 0 auto;
+            margin: 30px 20px 20px;
+        }
+        p{
+            text-indent: 2em;
+        }
+        .column{
+            width: 190px;
+            background-color:purple;
+            float: right;
+        }
+        footer{
+            width: 1200px;
+            height: 100px;
+            background-color: blue;
+            margin:15px auto 0px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oMenu = document.getElementById('menu');
+            var aH2 = oMenu.getElementsByTagName('h2');
+            var aUl = oMenu.getElementsByTagName('ul');
+            for(var i=0; i<aH2.length; i++){
+                aH2[i].index = i;
+                aH2[i].onclick = function(){
+                    for(var i=0; i<aUl.length; i++){
+                        if(i==this.index){
+                            if(aUl[this.index].style.display == 'block'){
+                                aUl[this.index].style.display = 'none';
+                                aH2[this.index].className="active11";
+                            }else{
+
+                                aUl[this.index].style.display = 'block';
+                                aH2[this.index].className="active";
+                            }
+                        }else{
+                            aUl[i].style.display = 'none';
+                            aH2[i].className="active11";
+
+                        }
+                    }
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+<header></header>
+<div class="content">
+    <div class="nav" >
+
+            <ul id="menu">
+                <li>
+                    <h2>菜单一</h2>
+                    <ul class="list" style="display: none;">
+                        <li>一的内容</li>
+                        <li>一的内容</li>
+                        <li>一的内容</li>
+                        <li>一的内容</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>菜单二</h2>
+                    <ul class="list">
+                        <li>二的内容</li>
+                        <li>二的内容</li>
+                        <li>二的内容</li>
+                        <li>二的内容</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>菜单三</h2>
+                    <ul class="list">
+                        <li>三的内容</li>
+                        <li>三的内容</li>
+                        <li>三的内容</li>
+                        <li>三的内容</li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>菜单四</h2>
+                    <ul class="list">
+                        <li>四的内容</li>
+                        <li>四的内容</li>
+                        <li>四的内容</li>
+                        <li>四的内容</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+    </div>
+    <div class="main">
+            <h2>标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一</h2>
+            <div class="word">
+                <p>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                </p>
+                <p>
+                    我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                </p>
+                <p>
+                    我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                </p>
+
+            </div>
+        </div>
+    <div class="column">广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告广告</div>
+</div>
+<footer></footer>
+</body>
+</html>
